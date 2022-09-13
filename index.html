@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script language="JavaScript">
+      
+    window.onload = function () {
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        }, false);
+        document.addEventListener("keydown", function (e) {
+            //document.onkeydown = function(e) {
+            // "I" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                disabledEvent(e);
+            }
+            // "J" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                disabledEvent(e);
+            }
+            // "S" key + macOS
+            if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                disabledEvent(e);
+            }
+            // "U" key
+            if (e.ctrlKey && e.keyCode == 85) {
+                disabledEvent(e);
+            }
+            // "F12" key
+            if (event.keyCode == 123) {
+                disabledEvent(e);
+            }
+        }, false);
+        function disabledEvent(e) {
+            if (e.stopPropagation) {
+                e.stopPropagation();
+            } else if (window.event) {
+                window.event.cancelBubble = true;
+            }
+            e.preventDefault();
+            return false;
+        }
+    }
+//edit: removed ";" from last "}" because of javascript error
+</script>
+  <title> Pedro Afonso - Portifolio</title>
+
+</head>
+
+<style>
+  body {
+    background: #161623;
+
+  }
+
+  h1,
+  h2 {
+    max-width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 35px;
+
+  }
+
+  h1 {
+    color: #24ff14;
+  }
+
+  h3,
+  h2 {
+    color: red;
+  }
+
+
+  .container {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1800px;
+    flex-wrap: wrap;
+    z-index: 1;
+  }
+
+  .container .card1 {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .container .card1 .content {
+
+    padding: 20px;
+    text-align: center;
+    /* transform: translateY(100px);
+    opacity: 1;
+    transition: 0, 5s;
+    */
+  }
+
+  .container .card1:hover .content {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  .container .card1 .content h2 {
+    position: absolute;
+    top: -80px;
+    right: 30px;
+    font-size: 8em;
+    color: #fff;
+
+  }
+
+  .container .card1 .content h3 {
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+  }
+
+  .container .card1 .content p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+  }
+
+  .container .card1 .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: #fff;
+
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .projetos {
+    max-height: 50%;
+    padding: 40px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+
+  }
+</style>
+
+
+
+<body>
+
+
+  <nav class="navbar navbar-dark bg-dark" style="color: #161623">
+    <div class="container-fluid">
+      <h3 class="navbar-brand" href="#" class="navbaar">Pedro Afonso </h3>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <!--<a class="nav-link active" aria-current="page" href="#">Sobre Mim</a> -->
+          </li>
+          <li class="nav-item">
+            <a style="text-align: center; " class="nav-link" href="#t">Tecnologias</a>
+          </li>
+          <li class="nav-item">
+            <a style="text-align: center; " class="nav-link" href="#e">Educacao</a>
+          </li>
+          <li class="nav-item">
+            <a style="text-align: center;"class="nav-link active" href="#p">Projetos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h1>Estudante De Engenharia De Software</h1>
+
+
+  <h1 class="projetos" id="t">Tecnologias</h1>
+  <div style="display: flex; justify-content: center;">
+    <img align="center" alt="Pedro-Js" height="30" width="40"
+      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+    <img align="center" alt="Pedro-React" height="30" width="40"
+      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+    <img align="center" alt="Pedro-HTML" height="30" width="40"
+      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+    <img align="center" alt="Pedro-CSS" height="30" width="40"
+      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+    <img align="center" alt="Pedro-Csharp" height="30" width="40"
+      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">
+    <img src="img/icons8-java-48.png" alt="" height="30" width="40">
+    <img src="img/icons8-mysql-logo-48.png" alt="" height="30" width="40">
+  </div>
+  </div>
+
+  <div class="projetos" id="e">
+    <h1 class="projetos">Educacao</h1>
+    <img src="img/logo-puc-minas.png" alt="" height="75" width="75">
+    <p>Segundo Periodo | Engenharia De Software</p>
+  </div>
+
+  <h1 class="projetos" id="p">Projetos</h1>
+  <div class="container">
+
+
+
+    <div class="card1">
+
+      <div class="content">
+        <h2></h2>
+        <p> <img src="img/imposto.jpg" alt=""></p>
+        <h3>Simulador IR</h3>
+        <p>Objetivo criar uma ferramenta para auxiliar pessoas que não tem conhecimento suficiente para gerar sua
+          declaração de imposto de renda </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Mais Informações
+          </button>
+          
+      </div>
+    </div>
+
+    <div class="card1">
+      <div class="content">
+        <h2></h2>
+        <p> <img src="img/c-removebg-preview.png "></p>
+        <h3>Codigos Linguagem C</h3>
+        <p> Para mais info basta clicar no botao abaixo ! </p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Mais Informações
+        </button>
+      </div>
+    </div>
+
+
+    <div class="card1">
+      <div class="content">
+        <h2></h2>
+        <p> <img src="img/api.jpeg" alt=""></p>
+        <h3>API-RESET | SPRINGBOOT</h3>
+        <p>Esta aplicacao foi desenvolvida com java para ligar o front-end no beck-end. </p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModa2">
+          Mais Informações
+        </button>
+      </div>
+    </div>
+
+    <div class="card1">
+      <div class="content">
+        <h2></h2>
+        <p> <img src="img/icons8-github.png"> </p>
+        <h3>Meu Git-Hub</h3>
+        <p>Conheca Meu Git-Hub. </p>
+        <a href="#">Mais Informacoes</a>
+      </div>
+    </div>
+  </div>
+
+
+  <h1 class="projetos" id="l">Contato</h1>
+  <div class="projetos " style="display: flex; justify-content: center;">
+
+    <a style="padding: 15px;" href="https://instagram.com/pedrodecampos023"><img
+        src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
+    <a style="padding: 15px;" href="mailto:fariapedro939@gmail.com"><img
+        src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white"></a>
+    <a style="padding: 15px;" href="https://www.linkedin.com/in/pedro-afonso-7882961b3/"><img
+        src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+  </div>
+  </div>
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Aplicação Simulador IR</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <img src="img/imposto.jpg" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Aplicação Simulador IR</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <img src="img/imposto.jpg" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Linguagem C</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button> 
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModa2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #161623">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" >
+        <h5 class="modal-title" id="exampleModalLabel"> Java Web</h5 >
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <!--IMG-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="bg-dark text-center text-white">
+    <div class="text-center p-3" >
+      © 2022 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">opedrocampos.com</a><br>
+      <a class="text-white">Teclas F12, CTRL + S, Inspecionar foram desativadas para evitar plágio, se você é um recrutador entre em contato comigo pelo Linkedin que disponibilizo o código fonte :D </a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+
+
+  <!--JavaScript Letras-->
+  <script>
+    function typeWrite(elemento) {
+      const textoArray = elemento.innerHTML.split('');
+      elemento.innerHTML = '';
+      textoArray.forEach((letra, i) => {
+        console.log(i)
+        setTimeout(() => elemento.innerHTML += letra, 75 * i);
+      });
+
+
+    }
+    const titulo = document.querySelector('h1');
+
+    typeWrite(titulo);
+    typeWrite(document.querySelector('h3'));
+  </script>
+
+  <script src="vanilla.js"></script>
+  <script>VanillaTilt.init(document.querySelectorAll(".card1"));</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
