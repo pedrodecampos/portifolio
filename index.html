@@ -8,46 +8,46 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script language="JavaScript">
-      
+
     window.onload = function () {
-        document.addEventListener("contextmenu", function (e) {
-            e.preventDefault();
-        }, false);
-        document.addEventListener("keydown", function (e) {
-            //document.onkeydown = function(e) {
-            // "I" key
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-                disabledEvent(e);
-            }
-            // "J" key
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-                disabledEvent(e);
-            }
-            // "S" key + macOS
-            if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-                disabledEvent(e);
-            }
-            // "U" key
-            if (e.ctrlKey && e.keyCode == 85) {
-                disabledEvent(e);
-            }
-            // "F12" key
-            if (event.keyCode == 123) {
-                disabledEvent(e);
-            }
-        }, false);
-        function disabledEvent(e) {
-            if (e.stopPropagation) {
-                e.stopPropagation();
-            } else if (window.event) {
-                window.event.cancelBubble = true;
-            }
-            e.preventDefault();
-            return false;
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      }, false);
+      document.addEventListener("keydown", function (e) {
+        //document.onkeydown = function(e) {
+        // "I" key
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+          disabledEvent(e);
         }
+        // "J" key
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+          disabledEvent(e);
+        }
+        // "S" key + macOS
+        if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+          disabledEvent(e);
+        }
+        // "U" key
+        if (e.ctrlKey && e.keyCode == 85) {
+          disabledEvent(e);
+        }
+        // "F12" key
+        if (event.keyCode == 123) {
+          disabledEvent(e);
+        }
+      }, false);
+      function disabledEvent(e) {
+        if (e.stopPropagation) {
+          e.stopPropagation();
+        } else if (window.event) {
+          window.event.cancelBubble = true;
+        }
+        e.preventDefault();
+        return false;
+      }
     }
 //edit: removed ";" from last "}" because of javascript error
-</script>
+  </script>
   <title> Pedro Afonso - Portifolio</title>
 
 </head>
@@ -58,7 +58,7 @@
 
   }
 
-  
+
   h1,
   h2 {
     max-width: 480px;
@@ -195,22 +195,25 @@
             <a style="text-align: center; " class="nav-link" href="#e">Educação</a>
           </li>
           <li class="nav-item">
-            <a style="text-align: center;"class="nav-link active" href="#p">Projetos</a>
+            <a style="text-align: center;" class="nav-link active" href="#p">Projetos</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  
-  
-  <div class="projetos" style="text-align: center; display:inline-block; " >
+
+
+  <div class="projetos" style="text-align: center; display:inline-block; ">
     <h1>Estudante De Engenharia De Software</h1>
-    <div class="fotos" style="text-align: center; display:inline-block; ">
-      <img  src="img/zyro-image.png" alt="" width="600" height="600" style="text-align: left; display:inline-block;   ">
-      <p style="text-align: center; display:inline-block; font-family: 'Courier New', Courier, monospace; font-size: 20px;" >Meu nome é Pedro Campos, estou no começo da minha carreira de desenvolvedor web e durante essa caminhada venho me aperfeiçoando e aprendendo cada dia mais, sempre com foco em desenvolvimento de software. </p>
+    <div class="fotos" style="text-align: center; display:inline-block; " ></div>
+      <img src="img/zyro-image.png" alt="" width="500" height="425" style="text-align: left; display:inline-block;   ">
+      <p
+        style="text-align: center; display:inline-block; font-family: 'Courier New', Courier, monospace; font-size: 20px;">
+        Meu nome é Pedro Campos, estou no começo da minha carreira de desenvolvedor web e durante essa caminhada venho
+        me aperfeiçoando e aprendendo cada dia mais, sempre com foco em desenvolvimento de software. </p>
     </div>
-    
+
   </div>
 
 
@@ -240,16 +243,7 @@
   <h1 class="projetos" id="p">Projetos</h1>
   <div class="container">
 
-     <div class="card1">
-      <div class="content">
-        <h2></h2>
-        <p> <img src="img/icons8-github.png"> </p>
-        <h3>Meu Git-Hub</h3>
-        <p> Conheça Meu Git Hub. </p>
-        <a href="https://github.com/pedrodecampos">Acessar O Git</a>
-      </div>
-    </div>
-  </div>
+
 
     <div class="card1">
 
@@ -259,10 +253,10 @@
         <h3>Simulador IR</h3>
         <p>Objetivo criar uma ferramenta para auxiliar pessoas que não tem conhecimento suficiente para gerar sua
           declaração de imposto de renda </p>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Mais Informações
-          </button>
-          
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Mais Informações
+        </button>
+
       </div>
     </div>
 
@@ -291,100 +285,111 @@
       </div>
     </div>
 
-   
+    <div class="card1">
+      <div class="content">
+        <h2></h2>
+        <p> <img src="img/icons8-github.png"> </p>
+        <h3>Meu Git-Hub</h3>
+        <p> Conheça Meu Git Hub. </p>
+        <a href="https://github.com/pedrodecampos">Mais Informações</a>
+      </div>
+    </div>
+  </div>
 
 
   <h1 class="projetos" id="l">Contatos</h1>
   <div class="projetos " style="display: flex; justify-content: center; ">
-   
-    <a style="padding: 15px;" href="https://instagram.com/pedrodecampos023"><img
-        src="img/instagram.png"  height="75" width="75"></a>
-    <a style="padding: 15px;" href="mailto:fariapedro939@gmail.com"><img
-      src="img/gmail.png"  height="75" width="75"></a>
-    <a style="padding: 15px;" href="https://www.linkedin.com/in/pedro-afonso-7882961b3/"><img
-        src="img/linkedin.png"  height="75" width="75"></a>
+
+    <a style="padding: 15px;" href="https://instagram.com/pedrodecampos023"><img src="img/instagram.png" height="75"
+        width="75"></a>
+    <a style="padding: 15px;" href="mailto:fariapedro939@gmail.com"><img src="img/gmail.png" height="75" width="75"></a>
+    <a style="padding: 15px;" href="https://www.linkedin.com/in/pedro-afonso-7882961b3/"><img src="img/linkedin.png"
+        height="75" width="75"></a>
   </div>
   </div>
-  
+
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"> Aplicação Simulador IR</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/Olá, o vídeo sobre esse projeto ainda esta sendo gravado e editado..png" alt="">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
-        
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"> Aplicação Simulador IR</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/Olá, o vídeo sobre esse projeto ainda esta sendo gravado e editado..png" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"> Aplicação Simulador IR</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/Olá, o vídeo sobre esse projeto ainda esta sendo gravado e editado..png" alt="">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
-        
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"> Aplicação Simulador IR</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/Olá, o vídeo sobre esse projeto ainda esta sendo gravado e editado..png" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Linguagem C</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/Olá, o vídeo sobre esse projeto ainda esta sendo gravado e editado..png" alt="">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button> 
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Linguagem C</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/Olá, o vídeo sobre esse projeto ainda esta sendo gravado e editado..png" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
-<div class="modal fade" id="exampleModa2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: #161623">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header" >
-        <h5 class="modal-title" id="exampleModalLabel"> Java Web</h5 >
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-       <img src="img/Olá, o vídeo sobre esse projeto ainda esta sendo gravado e editado..png" alt="">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
-        
+  <div class="modal fade" id="exampleModa2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    style="color: #161623">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"> Java Web</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/Olá, o vídeo sobre esse projeto ainda esta sendo gravado e editado..png" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+
+        </div>
       </div>
     </div>
   </div>
-</div>
 
   <footer class="bg-dark text-center text-white">
-    <div class="text-center p-3" >
+    <div class="text-center p-3">
       © 2022 Copyright:
       <a class="text-white" href="https://pedrocampos.tech">pedrocampos.tech</a><br>
-      <a class="text-white">Teclas F12, CTRL + S, Inspecionar foram desativadas para evitarem plágio, se você é um recrutador entre em contato pelo Linkedin que disponibilizo o código fonte :D </a>
+      <a class="text-white">Teclas F12, CTRL + S, Inspecionar foram desativadas para evitarem plágio, se você é um
+        recrutador entre em contato pelo Linkedin que disponibilizo o código fonte :D </a>
     </div>
     <!-- Copyright -->
   </footer>
@@ -408,7 +413,7 @@
 
     typeWrite(titulo);
     typeWrite(document.querySelector('h3'));
-  </script> 
+  </script>
 
   <script src="vanilla.js"></script>
   <script>VanillaTilt.init(document.querySelectorAll(".card1"));</script>
